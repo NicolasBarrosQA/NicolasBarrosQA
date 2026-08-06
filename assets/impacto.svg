@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 256" width="1280" height="256" fill="none" role="img" aria-label="Métricas de impacto em produção">
+  <defs>
+    <linearGradient id="obs" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0B11"/>
+      <stop offset="100%" stop-color="#07070C"/>
+    </linearGradient>
+    <linearGradient id="topLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.075"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="num" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="55%" stop-color="#D5DDE8"/>
+      <stop offset="100%" stop-color="#8A93A3"/>
+    </linearGradient>
+    <linearGradient id="cyanEdge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00D8FF"/>
+      <stop offset="100%" stop-color="#7C5CFF"/>
+    </linearGradient>
+    <filter id="glowSm" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="mesh2" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#FFFFFF" stroke-opacity="0.022" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="256" rx="20" fill="url(#obs)"/>
+  <rect width="1280" height="256" rx="20" fill="url(#mesh2)"/>
+
+  <!-- card template repeated -->
+  <g font-family="'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif">
+
+    <!-- 1 -->
+    <g transform="translate(20,20)" opacity="0">
+      <animate attributeName="opacity" to="1" dur="0.6s" begin="0.05s" fill="freeze"/>
+      <rect width="400" height="98" rx="14" fill="#0E0E15" stroke="#1E1E29"/>
+      <rect x="1" y="1" width="398" height="34" rx="13" fill="url(#topLight)"/>
+      <rect x="0" y="18" width="3" height="62" rx="1.5" fill="url(#cyanEdge)" filter="url(#glowSm)"/>
+      <text x="26" y="50" font-size="29" font-weight="800" fill="url(#num)"
+            font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace">14 transações SAP</text>
+      <text x="26" y="76" font-size="13.5" fill="#7C8697">orquestradas por uma única máquina de estados</text>
+    </g>
+
+    <!-- 2 -->
+    <g transform="translate(440,20)" opacity="0">
+      <animate attributeName="opacity" to="1" dur="0.6s" begin="0.15s" fill="freeze"/>
+      <rect width="400" height="98" rx="14" fill="#0E0E15" stroke="#1E1E29"/>
+      <rect x="1" y="1" width="398" height="34" rx="13" fill="url(#topLight)"/>
+      <rect x="0" y="18" width="3" height="62" rx="1.5" fill="url(#cyanEdge)" filter="url(#glowSm)"/>
+      <text x="26" y="50" font-size="29" font-weight="800" fill="url(#num)"
+            font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace">~14.500 linhas</text>
+      <text x="26" y="76" font-size="13.5" fill="#7C8697">Python modular em produção · 14 módulos</text>
+    </g>
+
+    <!-- 3 -->
+    <g transform="translate(860,20)" opacity="0">
+      <animate attributeName="opacity" to="1" dur="0.6s" begin="0.25s" fill="freeze"/>
+      <rect width="400" height="98" rx="14" fill="#0E0E15" stroke="#1E1E29"/>
+      <rect x="1" y="1" width="398" height="34" rx="13" fill="url(#topLight)"/>
+      <rect x="0" y="18" width="3" height="62" rx="1.5" fill="url(#cyanEdge)" filter="url(#glowSm)"/>
+      <text x="26" y="50" font-size="29" font-weight="800" fill="url(#num)"
+            font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace">6.000+ itens</text>
+      <text x="26" y="76" font-size="13.5" fill="#7C8697">4 pessoas × 7–9 meses previstos → ~1 semana</text>
+    </g>
+
+    <!-- 4 -->
+    <g transform="translate(20,138)" opacity="0">
+      <animate attributeName="opacity" to="1" dur="0.6s" begin="0.35s" fill="freeze"/>
+      <rect width="400" height="98" rx="14" fill="#0E0E15" stroke="#1E1E29"/>
+      <rect x="1" y="1" width="398" height="34" rx="13" fill="url(#topLight)"/>
+      <rect x="0" y="18" width="3" height="62" rx="1.5" fill="url(#cyanEdge)" filter="url(#glowSm)"/>
+      <text x="26" y="50" font-size="29" font-weight="800" fill="url(#num)"
+            font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace">40 min → 1–3 min</text>
+      <text x="26" y="76" font-size="13.5" fill="#7C8697">ciclo de logbook, integração nativa ao SAP MII</text>
+    </g>
+
+    <!-- 5 -->
+    <g transform="translate(440,138)" opacity="0">
+      <animate attributeName="opacity" to="1" dur="0.6s" begin="0.45s" fill="freeze"/>
+      <rect width="400" height="98" rx="14" fill="#0E0E15" stroke="#1E1E29"/>
+      <rect x="1" y="1" width="398" height="34" rx="13" fill="url(#topLight)"/>
+      <rect x="0" y="18" width="3" height="62" rx="1.5" fill="url(#cyanEdge)" filter="url(#glowSm)"/>
+      <text x="26" y="50" font-size="29" font-weight="800" fill="url(#num)"
+            font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace">R$ 60 mil</text>
+      <text x="26" y="76" font-size="13.5" fill="#7C8697">de consultoria externa dispensada por API própria</text>
+    </g>
+
+    <!-- 6 -->
+    <g transform="translate(860,138)" opacity="0">
+      <animate attributeName="opacity" to="1" dur="0.6s" begin="0.55s" fill="freeze"/>
+      <rect width="400" height="98" rx="14" fill="#0E0E15" stroke="#1E1E29"/>
+      <rect x="1" y="1" width="398" height="34" rx="13" fill="url(#topLight)"/>
+      <rect x="0" y="18" width="3" height="62" rx="1.5" fill="url(#cyanEdge)" filter="url(#glowSm)"/>
+      <text x="26" y="50" font-size="29" font-weight="800" fill="url(#num)"
+            font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace">300+ testes</text>
+      <text x="26" y="76" font-size="13.5" fill="#7C8697">escritos · unitário, integração, API e E2E</text>
+    </g>
+  </g>
+
+  <rect x="0.5" y="0.5" width="1279" height="255" rx="20" fill="none" stroke="#1C1C26"/>
+</svg>

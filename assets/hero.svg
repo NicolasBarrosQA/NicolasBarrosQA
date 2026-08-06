@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" width="1280" height="420" fill="none" role="img" aria-label="Nicolas Barros — Automação, Backend, IA e Qualidade de Software">
+  <defs>
+    <!-- ===== Obsidian base ===== -->
+    <linearGradient id="obsidian" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#0C0C12"/>
+      <stop offset="45%"  stop-color="#06060A"/>
+      <stop offset="100%" stop-color="#0A0A11"/>
+    </linearGradient>
+
+    <!-- ===== Specular gloss (top light) ===== -->
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#FFFFFF" stop-opacity="0.085"/>
+      <stop offset="40%"  stop-color="#FFFFFF" stop-opacity="0.020"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- ===== Liquid chrome for the name ===== -->
+    <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="0.35">
+      <stop offset="0%"   stop-color="#6F7684"/>
+      <stop offset="18%"  stop-color="#FFFFFF"/>
+      <stop offset="32%"  stop-color="#C9D2DE"/>
+      <stop offset="47%"  stop-color="#FFFFFF"/>
+      <stop offset="62%"  stop-color="#7C8494"/>
+      <stop offset="80%"  stop-color="#EDF2F7"/>
+      <stop offset="100%" stop-color="#6F7684"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        values="-0.45 0; 0.45 0; -0.45 0" dur="9s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="plasma" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#00D8FF"/>
+      <stop offset="55%"  stop-color="#4D8DFF"/>
+      <stop offset="100%" stop-color="#7C5CFF"/>
+    </linearGradient>
+
+    <linearGradient id="hairline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#00D8FF" stop-opacity="0"/>
+      <stop offset="25%"  stop-color="#00D8FF" stop-opacity="0.75"/>
+      <stop offset="60%"  stop-color="#7C5CFF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#7C5CFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="45%"  stop-color="#FFFFFF" stop-opacity="0.055"/>
+      <stop offset="55%"  stop-color="#9FE9FF" stop-opacity="0.075"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="auraCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#00D8FF" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#00D8FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="auraViolet" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#7C5CFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#7C5CFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="mesh" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#FFFFFF" stroke-opacity="0.028" stroke-width="1"/>
+    </pattern>
+
+    <filter id="bloom" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <clipPath id="card">
+      <rect x="0" y="0" width="1280" height="420" rx="22"/>
+    </clipPath>
+  </defs>
+
+  <!-- ===== Card ===== -->
+  <g clip-path="url(#card)">
+    <rect width="1280" height="420" fill="url(#obsidian)"/>
+    <rect width="1280" height="420" fill="url(#mesh)"/>
+
+    <ellipse cx="230" cy="60" rx="520" ry="300" fill="url(#auraCyan)">
+      <animate attributeName="cx" values="230;430;230" dur="17s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="1090" cy="380" rx="460" ry="280" fill="url(#auraViolet)">
+      <animate attributeName="cx" values="1090;900;1090" dur="21s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- gloss cap -->
+    <rect width="1280" height="190" fill="url(#gloss)"/>
+
+    <!-- traveling sheen -->
+    <g opacity="0.9">
+      <rect x="-520" y="-120" width="300" height="660" fill="url(#sheen)" transform="skewX(-18)">
+        <animate attributeName="x" values="-520;1500;1500" keyTimes="0;0.42;1" dur="8s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- scanline -->
+    <rect x="0" y="0" width="1280" height="1.5" fill="url(#hairline)" opacity="0.5">
+      <animate attributeName="y" values="-4;424;-4" dur="11s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- corner brackets -->
+    <g stroke="#2A2A36" stroke-width="1.5" fill="none">
+      <path d="M28 66V34a6 6 0 0 1 6-6h34"/>
+      <path d="M1252 354v32a6 6 0 0 1-6 6h-34"/>
+    </g>
+
+    <!-- ===== Terminal chip ===== -->
+    <g transform="translate(72,54)" opacity="0">
+      <animate attributeName="opacity" to="1" dur="0.7s" begin="0.1s" fill="freeze"/>
+      <rect width="272" height="32" rx="8" fill="#0D0D14" stroke="#22222D"/>
+      <rect x="1" y="1" width="270" height="12" rx="7" fill="#FFFFFF" opacity="0.03"/>
+      <circle cx="19" cy="16" r="3.5" fill="#FF5F56"/>
+      <circle cx="32" cy="16" r="3.5" fill="#FFBD2E"/>
+      <circle cx="45" cy="16" r="3.5" fill="#27C93F"/>
+      <text x="62" y="21" font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace" font-size="12.5" fill="#7A8494">
+        nicolas@barros:~$ whoami
+      </text>
+    </g>
+
+    <!-- ===== Name ===== -->
+    <text x="70" y="196" font-family="'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"
+          font-size="78" font-weight="800" letter-spacing="1" fill="url(#chrome)" opacity="0">
+      NICOLAS BARROS
+      <animate attributeName="opacity" to="1" dur="0.9s" begin="0.35s" fill="freeze"/>
+    </text>
+
+    <!-- accent rule -->
+    <rect x="72" y="216" width="0" height="4" rx="2" fill="url(#plasma)" filter="url(#bloom)">
+      <animate attributeName="width" to="392" dur="0.9s" begin="0.9s" fill="freeze"/>
+    </rect>
+
+    <!-- ===== Discipline line ===== -->
+    <text x="72" y="256" font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace"
+          font-size="16.5" font-weight="600" letter-spacing="2.2" fill="#00D8FF" opacity="0">
+      AUTOMAÇÃO · BACKEND · IA APLICADA · QUALIDADE
+      <animate attributeName="opacity" to="1" dur="0.8s" begin="1.2s" fill="freeze"/>
+    </text>
+
+    <!-- ===== Tagline ===== -->
+    <text x="72" y="294" font-family="'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"
+          font-size="17" fill="#98A2B3" opacity="0">
+      Automação, backend e qualidade em processos críticos de manufatura.
+      <animate attributeName="opacity" to="1" dur="0.8s" begin="1.45s" fill="freeze"/>
+    </text>
+    <text x="72" y="320" font-family="'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"
+          font-size="17" fill="#98A2B3" opacity="0">
+      Da engenharia reversa do processo ao go-live na fábrica.
+      <animate attributeName="opacity" to="1" dur="0.8s" begin="1.6s" fill="freeze"/>
+    </text>
+
+    <!-- ===== Chips ===== -->
+    <g font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace" font-size="12.5" opacity="0">
+      <animate attributeName="opacity" to="1" dur="0.8s" begin="1.85s" fill="freeze"/>
+      <g transform="translate(72,350)">
+        <rect width="92" height="30" rx="8" fill="#0E0E15" stroke="#00D8FF" stroke-opacity="0.35"/>
+        <rect x="1" y="1" width="90" height="11" rx="7" fill="#FFFFFF" opacity="0.035"/>
+        <text x="46" y="20" text-anchor="middle" fill="#7FE9FF">Python</text>
+      </g>
+      <g transform="translate(174,350)">
+        <rect width="98" height="30" rx="8" fill="#0E0E15" stroke="#4D8DFF" stroke-opacity="0.35"/>
+        <rect x="1" y="1" width="96" height="11" rx="7" fill="#FFFFFF" opacity="0.035"/>
+        <text x="49" y="20" text-anchor="middle" fill="#9CC0FF">FastAPI</text>
+      </g>
+      <g transform="translate(282,350)">
+        <rect width="70" height="30" rx="8" fill="#0E0E15" stroke="#7C5CFF" stroke-opacity="0.35"/>
+        <rect x="1" y="1" width="68" height="11" rx="7" fill="#FFFFFF" opacity="0.035"/>
+        <text x="35" y="20" text-anchor="middle" fill="#BFAEFF">SAP</text>
+      </g>
+      <g transform="translate(362,350)">
+        <rect width="118" height="30" rx="8" fill="#0E0E15" stroke="#4D8DFF" stroke-opacity="0.35"/>
+        <rect x="1" y="1" width="116" height="11" rx="7" fill="#FFFFFF" opacity="0.035"/>
+        <text x="59" y="20" text-anchor="middle" fill="#9CC0FF">TypeScript</text>
+      </g>
+      <g transform="translate(490,350)">
+        <rect width="112" height="30" rx="8" fill="#0E0E15" stroke="#00D8FF" stroke-opacity="0.35"/>
+        <rect x="1" y="1" width="110" height="11" rx="7" fill="#FFFFFF" opacity="0.035"/>
+        <text x="56" y="20" text-anchor="middle" fill="#7FE9FF">Playwright</text>
+      </g>
+    </g>
+
+    <!-- ===== Orbital emblem ===== -->
+    <g transform="translate(1070,214)" opacity="0">
+      <animate attributeName="opacity" to="1" dur="1.1s" begin="0.6s" fill="freeze"/>
+
+      <circle r="126" fill="none" stroke="#1A1A24" stroke-width="1"/>
+      <circle r="96"  fill="none" stroke="#1F1F2B" stroke-width="1"/>
+      <circle r="64"  fill="none" stroke="#242430" stroke-width="1"/>
+
+      <!-- rotating arcs -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="24s" repeatCount="indefinite"/>
+        <path d="M0 -126 A126 126 0 0 1 89 -89" fill="none" stroke="#00D8FF" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+        <circle cx="0" cy="-126" r="4.5" fill="#00D8FF"/>
+      </g>
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="16s" repeatCount="indefinite"/>
+        <path d="M0 96 A96 96 0 0 1 -68 68" fill="none" stroke="#7C5CFF" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+        <circle cx="0" cy="96" r="4" fill="#7C5CFF"/>
+      </g>
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="11s" repeatCount="indefinite"/>
+        <circle cx="64" cy="0" r="3.5" fill="#4D8DFF"/>
+      </g>
+
+      <!-- core -->
+      <circle r="46" fill="#0B0B11" stroke="#2A2A38"/>
+      <circle r="46" fill="url(#auraCyan)"/>
+      <path d="M-46 0 a46 46 0 0 1 46 -46 a46 46 0 0 1 46 46 z" fill="#FFFFFF" opacity="0.04"/>
+      <text x="0" y="14" text-anchor="middle"
+            font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace"
+            font-size="34" font-weight="700" fill="url(#plasma)">&lt;/&gt;</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -9;0 0" dur="7s" repeatCount="indefinite" additive="sum"/>
+    </g>
+
+    <!-- bottom hairline -->
+    <rect x="0" y="418" width="1280" height="2" fill="url(#hairline)" opacity="0.7"/>
+  </g>
+
+  <rect x="0.5" y="0.5" width="1279" height="419" rx="22" fill="none" stroke="#1E1E28"/>
+</svg>

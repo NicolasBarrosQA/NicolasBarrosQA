@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 200" width="1280" height="200" fill="none" role="img" aria-label="Vamos construir algo — contato">
+  <defs>
+    <linearGradient id="fObs" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#0A0A10"/>
+      <stop offset="50%"  stop-color="#06060B"/>
+      <stop offset="100%" stop-color="#0B0B12"/>
+    </linearGradient>
+    <linearGradient id="fChrome" x1="0" y1="0" x2="1" y2="0.4">
+      <stop offset="0%"   stop-color="#7A8291"/>
+      <stop offset="25%"  stop-color="#FFFFFF"/>
+      <stop offset="50%"  stop-color="#C7D0DC"/>
+      <stop offset="75%"  stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#7A8291"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        values="-0.4 0; 0.4 0; -0.4 0" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="fLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#00D8FF" stop-opacity="0"/>
+      <stop offset="30%"  stop-color="#00D8FF" stop-opacity="0.7"/>
+      <stop offset="70%"  stop-color="#7C5CFF" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#7C5CFF" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="fAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#00D8FF" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#00D8FF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="fMesh" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#FFFFFF" stroke-opacity="0.022" stroke-width="1"/>
+    </pattern>
+    <clipPath id="fCard"><rect width="1280" height="200" rx="20"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#fCard)">
+    <rect width="1280" height="200" fill="url(#fObs)"/>
+    <rect width="1280" height="200" fill="url(#fMesh)"/>
+    <ellipse cx="640" cy="210" rx="620" ry="180" fill="url(#fAura)">
+      <animate attributeName="rx" values="620;520;620" dur="12s" repeatCount="indefinite"/>
+    </ellipse>
+    <rect width="1280" height="90" fill="#FFFFFF" opacity="0.018"/>
+    <rect y="0" width="1280" height="2" fill="url(#fLine)"/>
+
+    <text x="640" y="76" text-anchor="middle"
+          font-family="'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"
+          font-size="34" font-weight="800" letter-spacing="1" fill="url(#fChrome)">
+      VAMOS CONSTRUIR ALGO
+    </text>
+
+    <text x="640" y="112" text-anchor="middle"
+          font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace"
+          font-size="14" letter-spacing="1.4" fill="#00D8FF">
+      Hortolândia · SP · Brasil  —  disponível para atuação remota
+    </text>
+
+    <text x="640" y="146" text-anchor="middle"
+          font-family="'JetBrains Mono','SFMono-Regular',Consolas,monospace"
+          font-size="13.5" fill="#798394">
+      nicolasescaleta@gmail.com   ·   /in/nicolas-barros-910852197   ·   @NicolasBarrosQA
+    </text>
+
+    <g fill="#00D8FF">
+      <circle cx="560" cy="170" r="3" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="2.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="640" cy="170" r="3" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="2.4s" begin="0.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="720" cy="170" r="3" fill="#7C5CFF" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+  <rect x="0.5" y="0.5" width="1279" height="199" rx="20" fill="none" stroke="#1C1C26"/>
+</svg>
